@@ -1,0 +1,11 @@
+from math import floor
+
+from project.hardware.hardware import Hardware
+
+
+class HeavyHardware(Hardware):
+    def __init__(self, name: str, hardware_type: str, capacity: int, memory: int):
+        super().__init__(name, hardware_type, capacity, memory)
+        self.hardware_type = "Heavy"
+        self.capacity = 2 * capacity
+        self.memory = floor(0.75 * memory)
